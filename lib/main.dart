@@ -40,7 +40,7 @@ class HomePageState extends State<HomePage> {
 
       appBar: AppBar(
           title: Center(
-            child: Text("Pokedex with Fultter",
+            child: Text("Pokedex",
               style: TextStyle(fontWeight: FontWeight.bold)),
           ),
           backgroundColor: Colors.redAccent
