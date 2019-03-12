@@ -28,7 +28,7 @@ class Detail extends StatelessWidget{
                 Text("Peso: ${pokemon.weight}"),
                 Text("Tipo",style: TextStyle(fontWeight: FontWeight.bold)),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: pokemon.type.map((t) => FilterChip(
                       backgroundColor: Colors.amber,
                       label: Text(
@@ -39,7 +39,7 @@ class Detail extends StatelessWidget{
                 ),
                 Text("Debilidad",style: TextStyle(fontWeight: FontWeight.bold)),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: pokemon.weaknesses.map((t) => FilterChip(
                       backgroundColor: Colors.red,
                       label: Text(
@@ -51,14 +51,14 @@ class Detail extends StatelessWidget{
                 ),
                 Text("Evoluciones",style: TextStyle(fontWeight: FontWeight.bold)),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: pokemon.nextEvolution?.map((n) => FilterChip(
                       backgroundColor: Colors.lightBlueAccent,
                       label: Text(
                           n.name,
                           style: TextStyle(color: Colors.white),
                       ),
-                      onSelected: (b) {}))?.toList()??[Text(pokemon.name)],
+                      onSelected: (b) {}))?.toList()??[Text("Ultima evolucion")],
                 )
               ],
             ),

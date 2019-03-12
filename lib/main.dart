@@ -37,8 +37,12 @@ class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       appBar: AppBar(
-          title: Text("Pokedex with Fultter"),
+          title: Center(
+            child: Text("Pokedex with Fultter",
+              style: TextStyle(fontWeight: FontWeight.bold)),
+          ),
           backgroundColor: Colors.redAccent
       ),
       body: pokeHub == null?Center(child: CircularProgressIndicator(),):
