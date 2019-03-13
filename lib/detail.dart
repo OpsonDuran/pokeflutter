@@ -58,7 +58,12 @@ class Detail extends StatelessWidget{
                           n.name,
                           style: TextStyle(color: Colors.white),
                       ),
-                      onSelected: (b) {}))?.toList()??[Text("Ultima evolucion")],
+                      onSelected: (b) {}))?.toList()??[FilterChip(
+                    backgroundColor: Colors.lightBlueAccent,
+                    label: Text(
+                      "Ultima Evolucion",
+                      style: TextStyle(color: Colors.white),
+                    ),onSelected: (b) {})],
                 )
               ],
             ),
@@ -71,8 +76,8 @@ class Detail extends StatelessWidget{
         child: Hero(
             tag: pokemon.img,
             child: Container(
-              height: 180.0,
-              width: 180.0,
+              height: 160.0,
+              width: 160.0,
               decoration: BoxDecoration(
                   image: DecorationImage(
                       fit: BoxFit.cover, image: NetworkImage(pokemon.img))),
@@ -88,7 +93,7 @@ class Detail extends StatelessWidget{
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Colors.redAccent,
-        title: Text(pokemon.name),
+        title: Text(pokemon.num),
       ),
       body: bodyWidget(context),
     );
